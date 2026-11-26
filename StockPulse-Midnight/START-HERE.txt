@@ -1,0 +1,25 @@
+STOCKPULSE — MIDNIGHT RESEARCH
+
+1. Extract this ZIP into a NEW folder. Keep the old project as a backup.
+2. Open PowerShell in the folder that contains app.py.
+3. Install the web dependencies:
+
+conda run --no-capture-output -n stockpulse311 python -m pip install -r requirements.txt
+
+4. To explore the new interface, double-click preview.bat.
+   The preview is clearly labelled and uses illustrative data.
+   Create a test account and add a holding to see the portfolio charts.
+5. Open http://127.0.0.1:5000 when the terminal says the server is running.
+
+For real market data, run run.bat instead. Do not use preview.bat at the same time.
+To use your old accounts and holdings, read the migration section in README.md.
+The database, API keys, cached prices and trained model files are not included.
+
+Read README.md for Gemini configuration, optional model dependencies,
+Windows DLL troubleshooting and instructions for your existing Conda environment.
+
+REVIEWED BUILD
+The requirements now include security patch updates. Re-run the install command,
+even if you installed the earlier ZIP. Retrain the Random Forest model after updating.
+Web training is restricted and disabled by default; see README.md for local owner setup.
+Read DEPLOYMENT-REVIEW.md before exposing this application publicly.

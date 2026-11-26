@@ -1,0 +1,4 @@
+# Optional: LSTM and FinBERT. First install requirements.txt.
+# Install the CPU PyTorch wheel separately (see README) on Windows.
+tensorflow==2.17.0
+transformers==4.36.0

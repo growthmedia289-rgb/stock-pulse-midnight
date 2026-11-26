@@ -1,0 +1,8 @@
+{% set scene = 'capital-flow' if request.endpoint in ['dashboard','portfolio'] else 'coin-motion' if request.endpoint in ['backtest_view','chatbot','train_model','train_lstm'] else 'market-lines' %}
+<div class="ambient-scene scene-{{ scene }}" id="ambientScene" aria-hidden="true">
+  <img class="ambient-poster" src="{{ url_for('static',filename='media/' ~ scene ~ '.webp') }}" alt="" fetchpriority="low" decoding="async">
+  <video class="ambient-video" id="ambientVideo" muted loop playsinline preload="none" tabindex="-1" data-src="{{ url_for('static',filename='media/' ~ scene ~ '.mp4') }}" data-webm="{{ url_for('static',filename='media/' ~ scene ~ '.webm') }}" poster="{{ url_for('static',filename='media/' ~ scene ~ '.webp') }}"></video>
+  <div class="ambient-veil"></div>
+  <div class="ambient-glow"></div>
+</div>
+<button class="motion-toggle" id="motionToggle" type="button" aria-controls="ambientVideo" hidden><span class="motion-dot" aria-hidden="true"></span><span id="motionLabel">Play background</span></button>
